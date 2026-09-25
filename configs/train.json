@@ -1,6 +1,23 @@
 {
-  "integration": "my_project.ecb_adapter:build",
-  "integration_options": {},
+  "integration": "ecb.integrations.minionerec:build",
+  "integration_options": {
+    "minionerec_root": "../MiniOneRec",
+    "base_checkpoint": "checkpoints/minionerec",
+    "ranker_checkpoint": "checkpoints/ranker",
+    "catalog": "data/catalog.jsonl",
+    "train_contexts": "data/train_contexts.jsonl",
+    "train_targets": "data/train_targets.jsonl",
+    "eval_contexts": "data/eval_contexts.jsonl",
+    "eval_targets": "data/eval_targets.jsonl",
+    "transitions": "data/train_transitions.json",
+    "device": "cuda:0",
+    "max_prompt_tokens": 2048,
+    "score_batch_size": 2,
+    "signal_items": 3,
+    "ranker_cost": 0.001,
+    "retrieval_cost": 0.001,
+    "reward_rollouts": 2
+  },
   "model": {
     "embedding_dim": 128,
     "hidden_dim": 64,
