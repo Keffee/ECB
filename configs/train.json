@@ -1,0 +1,29 @@
+{
+  "integration": "my_project.ecb_adapter:build",
+  "integration_options": {},
+  "model": {
+    "embedding_dim": 128,
+    "hidden_dim": 64,
+    "max_rounds": 3,
+    "history_size": 32,
+    "shortlist_size": 20,
+    "pool_size": 100,
+    "retrieval_slots": 6,
+    "budget": 100.0,
+    "seed": 42,
+    "epochs": 10,
+    "warmup_epochs": 1,
+    "batch_size": 8,
+    "gate_passes": 5,
+    "learning_rate": 0.001,
+    "entropy_weight": 0.001,
+    "gradient_clip": 5.0,
+    "gate_threshold": 0.0
+  },
+  "reward_fit": {
+    "epochs": 20,
+    "learning_rate": 0.001
+  },
+  "reward_checkpoint": "outputs/reward/reward.pt",
+  "output_dir": "outputs/controller"
+}
